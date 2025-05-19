@@ -7,12 +7,11 @@ import MostExpensivePhones from '../../ui/dashboard/phones';
 import { Suspense}  from 'react';
 import {RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton} from '@/app/ui/skeletons';
 
-export const dynamic = 'force-dynamic';
+// Ревалидация каждые 20 секунд
+export const revalidate = 20;
 
 export default async function Page() {
 
-  const latestInvoices = await fetchLatestInvoices();
-  const { totalPaidInvoices, totalPendingInvoices, numberOfInvoices, numberOfCustomers } = await fetchCardData();
   const phones = await fetchMostExpensivePhones();
 
   return (
