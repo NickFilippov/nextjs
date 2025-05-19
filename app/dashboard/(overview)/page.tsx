@@ -7,8 +7,7 @@ import MostExpensivePhones from '../../ui/dashboard/phones';
 import { Suspense}  from 'react';
 import {RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton} from '@/app/ui/skeletons';
 
-// Ревалидация каждые 20 секунд
-export const revalidate = 20;
+export const dynamic = 'force-dynamic';
 
 export default async function Page() {
 
