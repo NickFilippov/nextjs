@@ -7,7 +7,8 @@ import MostExpensivePhones from '../../ui/dashboard/phones';
 import { Suspense}  from 'react';
 import {RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton} from '@/app/ui/skeletons';
 
- 
+export const revalidate = 0;
+
 export default async function Page() {
 
   const latestInvoices = await fetchLatestInvoices();
