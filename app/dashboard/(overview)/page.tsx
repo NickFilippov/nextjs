@@ -7,7 +7,9 @@ import MostExpensivePhones from '../../ui/dashboard/phones';
 import { Suspense}  from 'react';
 import {RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton} from '@/app/ui/skeletons';
 
-export const revalidate = 0;
+// Явно указываем, что страница динамическая
+export const dynamic = 'force-dynamic';
+
 
 export default async function Page() {
 
