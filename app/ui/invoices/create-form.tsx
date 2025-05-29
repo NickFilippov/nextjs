@@ -9,7 +9,6 @@ import {
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions';
 
-
 export default function Form({ customers }: { customers: CustomerField[] }) {
   return (
     <form action={createInvoice}>
@@ -29,7 +28,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               <option value="" disabled>
                 Select a customer
               </option>
-              {customers.map((customer) => (
+              {customers.map(customer => (
                 <option key={customer.id} value={customer.id}>
                   {customer.name}
                 </option>
@@ -61,9 +60,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
         {/* Invoice Status */}
         <fieldset>
-          <legend className="mb-2 block text-sm font-medium">
-            Set the invoice status
-          </legend>
+          <legend className="mb-2 block text-sm font-medium">Set the invoice status</legend>
           <div className="rounded-md border border-gray-200 bg-white px-[14px] py-3">
             <div className="flex gap-4">
               <div className="flex items-center">
